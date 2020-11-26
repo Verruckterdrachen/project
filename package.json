@@ -1,0 +1,32 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verruckterdrachen/project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Verruckterdrachen/project/issues"
+  },
+  "homepage": "https://github.com/Verruckterdrachen/project#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "browser-sync": "^2.26.13",
+    "jslint": "^0.12.1"
+  }
+}

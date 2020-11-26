@@ -1,0 +1,64 @@
+.button
+    padding: 11px 24px
+    border: none
+    border-radius: 2px
+    text-transform: uppercase
+    font-size: 0.93rem
+    &:hover
+        cursor: pointer
+    &--primary
+        background-color: $primary
+        color: $white
+        box-shadow: none
+        transition: box-shadow .1s
+        &:hover 
+            box-shadow: 0px 5px 15px rgba($primary, 0.2)
+    &--outline
+        border: 1px solid $white
+        background-color: transparent
+        color: $white
+.label
+    font-size: 1.07rem
+    &--white
+        color: rgba($white, 0.5)
+.input
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+    font-size: 1.285rem
+    padding: 0.5rem 0
+    margin-bottom: 1rem
+    &--white
+        color: $white
+        &::placeholder
+            color: $white
+.policy
+    &__checkbox
+        opacity: 0
+        visibility: hidden
+        &:checked + 
+           .policy__label
+               &::before
+                   background: $primary url('../img/modal/check.svg') no-repeat center / 0.8rem
+    &__label
+        display: flex
+        align-items: center
+        font-size: 1.142rem
+        &::before
+            content: ""
+            width: 18px
+            height: 18px
+            border: 1px solid $primary
+            border-radius: 1px
+            cursor: pointer
+            margin-right: 0.64rem
+        &--center
+            justify-content: center
+label
+    &.invalid
+        color: tomato
+input
+    &.invalid
+        border-bottom: 1px solid tomato
+
+
