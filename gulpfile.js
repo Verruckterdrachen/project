@@ -13,7 +13,6 @@ const autoprefixer = require('gulp-autoprefixer');
 function bs() {
     serveSass();
     serveMinCss();
-    buildJs();
     browserSync.init({
         server: {
             baseDir: "src/"
@@ -23,7 +22,6 @@ function bs() {
     watch("src/sass/*.sass", serveSass);
     watch("src/sass/*.scss", serveSass);
     watch("src/css/*.css", serveMinCss);
-    watch("src/js/*.js", buildJs());
 };
 
 // sass
