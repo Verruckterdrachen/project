@@ -45,13 +45,5 @@ function serveMinCss() {
         .pipe(dest('dist'));
 };
 
-// min-js
-function buildJs() {
-    return src(['src/js/*.js', '!js/**.min.js'])
-        .pipe(minify())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(dest('dist/js/'));
-};
-
 exports.serve = bs;
 // enter "gulp serve"

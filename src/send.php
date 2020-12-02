@@ -18,19 +18,19 @@ try {
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'bruh@gmail.com';                     // SMTP username
-    $mail->Password   = 'pass';                               // SMTP password
+    $mail->Username   = 'verruckterdrachen@gmail.com';                     // SMTP username
+    $mail->Password   = 'jmgibertugb4hmnuhgmi9';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('bruh@gmail.com', 'bruhName');
-    $mail->addAddress('verruckterdrachen@gmail.com');     // Add a recipient
+    $mail->setFrom('verruckterdrachen@gmail.com', 'Никита');
+    $mail->addAddress('korshunov.nikita80@gmail.com');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
+    $mail->Body = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
 
     if ($mail->send();) {
         echo "Письмо отправлено.";

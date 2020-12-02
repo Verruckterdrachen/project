@@ -133,13 +133,3 @@ $(document).ready(function() {
     $('[type=tel]').mask('+7(000)-000-00-00', { placeholder: "+7(___)-___-__-__" });
 
 });
-
-/*
-    document.addEventListener('keyup', (event) => {
-        var keyName = event.key;
-        if (keyName === 'Escape') {
-            modal.toggleClass('modal--visible')
-        }
-
-    }, false);
-*/
