@@ -718,8 +718,12 @@ input.invalid {
   flex-basis: 30%; }
 
 .video__play {
+  cursor: pointer;
   position: relative;
-  margin: auto; }
+  margin: auto;
+  transition: .1s; }
+  .video__play:hover {
+    transform: scale(1.08); }
 
 .types__sectoion-title {
   margin-bottom: 2rem; }
