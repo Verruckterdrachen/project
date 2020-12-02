@@ -22,7 +22,7 @@ function bs() {
     watch("src/sass/*.sass", serveSass);
     watch("src/sass/*.scss", serveSass);
     watch("src/css/*.css", serveMinCss);
-};
+}
 
 // sass
 function serveSass() {
@@ -33,7 +33,7 @@ function serveSass() {
         }))
         .pipe(dest('src/css'))
         .pipe(browserSync.stream());
-};
+}
 
 // min-css
 function serveMinCss() {
@@ -41,7 +41,7 @@ function serveMinCss() {
         .pipe(minCss())
         .pipe(rename({ suffix: '.min' }))
         .pipe(dest('dist'));
-};
+}
 
 exports.serve = bs;
 // enter "gulp serve"

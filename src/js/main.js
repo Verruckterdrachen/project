@@ -4,10 +4,50 @@ $(document).ready(function() {
         closeBtn = $('.modal__close');
 
     modalBtn.on('click', function() {
-        modal.toggleClass('modal--visible')
+        modal.toggleClass('modal--visible');
     });
+
     closeBtn.on('click', function() {
-        modal.toggleClass('modal--visible')
+        modal.toggleClass('modal--visible');
+    });
+
+    $(document).keyup(function (keyClose) {
+        // 27 - keyCode
+        if (keyClose.which == 27 && modal.hasClass("modal--visible")) {
+            modal.toggleClass('modal--visible');
+        }
+    });
+
+    $(document).click(function (keyClose) {
+        if ($(keyClose.target).is('.modal')) {
+            modal.toggleClass('modal--visible')
+        }
+    });
+    
+    $(document).ready(function(){
+        $(function(){
+            if ($(window).width() > 900){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 900) {
+                $('.header__scroll-up').animate({
+                    opacity: 1
+                }, 1);
+            } else {
+                $('.header__scroll-up').animate({
+                    opacity: 0
+                }, 1);
+    
+            }
+        });
+    }
+    });
+        $('.header__scroll-up').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);
+            return false;
+        });
+        
     });
 
     var mySwiper = new Swiper('.swiper-container', {
@@ -78,6 +118,7 @@ $(document).ready(function() {
             });
         }
     });
+
     $('.footer__form').validate({
         errorClass: "invalid",
         rules: {
@@ -129,7 +170,12 @@ $(document).ready(function() {
             userPhone: "Телефон обязателен",
         }
     });
+    
 
     $('[type=tel]').mask('+7(000)-000-00-00', { placeholder: "+7(___)-___-__-__" });
 
 });
+
+
+
+

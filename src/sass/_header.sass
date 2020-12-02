@@ -6,6 +6,31 @@
     z-index: 99
     background-color: $dark
     padding: 24px 0
+    &__scroll-up
+        opacity: 0
+        z-index: 3
+        font-family: 'Yeseva One', cursive
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        left: 0
+        top: 62px
+        min-width: 17.6rem
+        min-height: 6.92rem
+        background-color: $dark
+        text-transform: uppercase
+        color: $white
+        text-decoration: none
+        &::after
+            content: ''
+            background: url('../img/hero/arrow-down.svg') no-repeat center
+            width: 30px
+            height: 30px
+            border: 2px solid $primary
+            border-radius: 50%
+            margin-left: 12px
+            transform: rotate(180deg) 
 .menu
     display: flex
     justify-content: space-between
