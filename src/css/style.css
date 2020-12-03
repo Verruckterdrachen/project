@@ -25,6 +25,9 @@
 .col-30 {
   flex-basis: 30%; }
 
+.col-35 {
+  flex-basis: 35%; }
+
 .col-50 {
   width: 50%; }
 
@@ -391,21 +394,77 @@ input.invalid {
   bottom: 0; }
 
 .request {
-  margin-top: 10rem; }
+  margin-top: 4rem; }
+  .request__button {
+    display: flex;
+    justify-content: flex-end; }
   .request .bank {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 2.857rem; }
   .request .card {
+    padding-top: 6rem;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: flex-end; }
     .request .card__text {
+      max-width: 21.274rem;
       font-size: 1.428rem;
       color: #E3B873;
       font-weight: bold;
       margin: 0; }
+  .request__circle {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: url("../img/request/request-bg.png") left no-repeat; }
+  .request__item {
+    position: relative;
+    font-size: 1.285rem;
+    color: #131313;
+    line-height: 1.486rem;
+    vertical-align: middle; }
+    .request__item::before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      content: '';
+      background-color: #E3B873;
+      color: #fff;
+      font-family: 'Yeseva One', cursive;
+      width: 41.76px;
+      height: 41.76px;
+      border-radius: 50%;
+      left: -65px; }
+
+.request__item:nth-child(1) {
+  margin-left: 30rem;
+  padding-bottom: 5.9rem; }
+  .request__item:nth-child(1)::before {
+    content: '01'; }
+
+.request__item:nth-child(2) {
+  margin-left: 35.2rem;
+  padding-bottom: 9.9rem; }
+  .request__item:nth-child(2)::before {
+    top: -10px;
+    content: '02'; }
+
+.request__item:nth-child(3) {
+  margin-left: 37rem; }
+  .request__item:nth-child(3)::before {
+    top: -10px;
+    content: '03'; }
+
+.request__item:nth-child(4) {
+  margin-left: 32rem;
+  padding-bottom: 7.6rem;
+  padding-top: 9.4rem; }
+  .request__item:nth-child(4)::before {
+    content: '04'; }
 
 .fantasy {
   margin-top: 15rem;
@@ -907,7 +966,8 @@ input.invalid {
     font-size: 1.357rem;
     text-align: center;
     margin: 0;
-    margin-bottom: 2.428rem; }
+    margin-bottom: 2.428rem;
+    font-weight: normal; }
   .modal__form {
     display: flex;
     flex-direction: column; }
@@ -924,6 +984,10 @@ input.invalid {
 
 .request .modal__close {
   display: none; }
+
+@media screen and (max-width: 1258px) {
+  .request {
+    display: none; } }
 
 @media screen and (max-width: 1200px) {
   html {

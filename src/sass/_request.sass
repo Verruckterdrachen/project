@@ -1,16 +1,71 @@
 .request
-    margin-top: 10rem
+    margin-top: 4rem
+    &__button
+        display: flex
+        justify-content: flex-end
     .bank
         display: flex
         flex-direction: row
         align-items: center
         margin-top: 2.857rem
     .card
+        padding-top: 6rem
         display: flex
         flex-direction: column
-        align-items: center
+        align-items: flex-end
         &__text
+            max-width: 21.274rem
             font-size: 1.428rem
             color: $primary
             font-weight: bold
             margin: 0
+    &__circle
+        height: 700px
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        background: url('../img/request/request-bg.png') left no-repeat
+    &__item
+        position: relative
+        font-size: 1.285rem
+        color: $dark
+        line-height: 1.486rem
+        vertical-align: middle
+        &::before
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            content: ''
+            background-color: $primary
+            color: $white
+            font-family: 'Yeseva One', cursive
+            width: 41.76px
+            height: 41.76px
+            border-radius: 50%
+            left: -65px
+            
+
+.request__item:nth-child(1)
+    margin-left: 30rem
+    padding-bottom: 5.9rem
+    &::before
+        content: '01'
+
+.request__item:nth-child(2)
+    margin-left: 35.2rem
+    padding-bottom: 9.9rem
+    &::before
+        top: -10px
+        content: '02'
+.request__item:nth-child(3)
+    margin-left: 37rem
+    &::before
+        top: -10px
+        content: '03'
+.request__item:nth-child(4)
+    margin-left: 32rem
+    padding-bottom: 7.6rem
+    padding-top: 9.4rem
+    &::before
+        content: '04'
