@@ -47,6 +47,12 @@ $(document).ready(function() {
             }, 500);
             return false;
         });
+        $('.hero__scroll-down').click(function () {
+            $('body,html').animate({
+                scrollTop: 1000
+            }, 500);
+            return false;
+        });
         
     });
 
